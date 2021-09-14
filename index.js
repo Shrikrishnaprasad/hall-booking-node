@@ -19,7 +19,7 @@ mongoose
   .catch((err) => console.log(err));
 
 app.use("/", (req, res) => {
-  res.json(Home);
+  res.json("Home");
 });
 
 app.use("/rooms", roomsRoute);
