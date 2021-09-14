@@ -18,6 +18,10 @@ mongoose
   .then(() => console.log("MONGODB Connected successfully"))
   .catch((err) => console.log(err));
 
+app.use("/", (req, res) => {
+  res.json(Home);
+});
+
 app.use("/rooms", roomsRoute);
 app.listen(process.env.PORT, () => {
   console.log("Server is running");
